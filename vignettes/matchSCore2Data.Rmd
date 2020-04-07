@@ -6,7 +6,6 @@ author:
   - &id1 Institute of Medical Biostatistics, Epidemiology and Informatics (IMBEI), Mainz
   - Center for Thrombosis and Hemostasis (CTH), Mainz
   email: marinif@uni-mainz.de
-author:
 - name: Elisabetta Mereu
   affiliation: 
   - &id2 National Center for Genomic Analysis, Center for Genomic Regulation (CRG), Barcelona, Spain
