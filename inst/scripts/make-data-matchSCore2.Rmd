@@ -1,0 +1,58 @@
+---
+title: "Download and preprocess the matchSCore2 datasets" 
+author: "Federico Marini and Elisabetta Mereu"
+date: ""
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(width = 100)
+```
+
+# Helper functions
+
+```{r}
+library(HDF5Array)
+library(SingleCellExperiment)
+
+getGenomes <- function(path) {
+  genomes <- attributes(h5dump(path, load = FALSE))$names
+  genomes
+}
+
+getRowData <- function(path, genome = NULL) {
+  if (is.null(genome)) 
+    genome <- getGenomes(path)[1]
+  data.frame(
+    ID = as.character(h5read(path, paste0(genome,"/genes"))),
+    Symbol=as.character(h5read(path, paste0(genome,"/gene_names"))),
+    stringsAsFactors=FALSE
+  )
+}
+
+getColData <- function(path, genome = NULL) {
+  if (is.null(genome)) 
+    genome <- getGenomes(path)[1]
+  
+  barcode <- as.character(h5read(path, paste0(genome,"/barcodes")))
+  
+  data.frame(
+    Barcode=barcode,
+    stringsAsFactors=FALSE
+  )
+}
+```
+
+# Downloading the files
+
+(accessed ...)
+
+# Generating and saving the `SingleCellExperiment` object
+
+# Session info {-}
+
+```{r}
+sessionInfo()
+```
+
