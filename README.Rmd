@@ -15,3 +15,12 @@ Available at http://bioconductor.org/packages/matchSCore2Data/.
 This is an R/[ExperimentHub](https://bioconductor.org/packages/release/bioc/html/ExperimentHub.html) package for accessing data from the matchSCore2 project as [`SingleCellExperiment`](https://bioconductor.org/packages/release/bioc/html/SingleCellExperiment.html) objects.
 
 
+## Code of Conduct
+  
+Please note that the `matchSCore2Data` project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). 
+By contributing to this project, you agree to abide by its terms.
+
+## License
+
+MIT &copy; Federico Marini and Elisabetta Mereu
+
